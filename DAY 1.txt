@@ -1,0 +1,68 @@
+Nhập môn kiểm thử phần mềm 
+- Môn này học về bug, học , hiểu , tìm ra sai sót của phần mềm 
+- Học về các kĩ thuậtể tìmddc sai sót, khiếm khuyết của phần mềm 
+- Sai sót của phần mềm có tên gọi khác nhau, nhưng từ phổ biến hay dung là BUG 
+- Học môn này giúp bạn có các kiến thức , khái niệm, thực hành để trở thành 1 người giữ vai trò gác cổng chất lượng phần mềm, học trở thành "THÁNH SÓI"
+
+0. CÁC THUẬT NGỮ TƯƠNG ĐOÒNG , SAME SAME XOAY QUANH BUG
+- BUG, MISTAKE, ERROR, DEFECT, FAILURE,...
+- Hiểu môn na, bug là 1 sai sót của phần mềm mà dàn "THÁNH SOI" QA/QC/TESTER tìm ra, và dàn DEV (DEVELOPE) thừa nhận rằng đó là sai sót cần phải sửa 
+(QUALITY ASUẢNCE, QUALITY CONTROL, TÊSTER) 
+
+BA : BUSINESS ANALYST
+open source : mã nguồn mở 
+có thể can thiệp vào source code và xem dc BUG của thiên hạ
+
+- CĂN CỨ MÀ DÂN THÁNH SOI VÀ DÂN DEV LÀM VIỆC, TRÁNH TRANH CÃI VỀ CÁC TÍNH NĂNG PHẦN MỀM LÀ NHỮNG CUỐN TÀI LIỆU VỀ THIẾT KẾ, VỀ REQUIREMENT ĐÃ ĐC VIẾT RA 
+
+ 4. TÀI LIỆU MÔ TẢ VỀ PHẦN MỀM SẼ LÀM (DÂN BA - BUSINESS ANALYST VIẾT RA) 
+	> SRS - SOFTWARE REQUIREMENTS SPECIFICATION (SPEC - BẢN ĐẶC TẢ)
+	> FRS - DUNCTIONAL REQUIREMENTS SPECIFICATION
+	> AC - ACCEPTANCE CRITERIA
+	> DoD - DEFINTION of DONE
+
+BASE-LINE : THỨ (DOCUMENT) DÙNG ĐỂ ĐIỂM MỐC ĐỂ SO SÁNH, ĐỐI CHIẾU, LÀM CĂN CỨ ĐỂ NÓI VỀ ĐIỀU GÌ KHÁC, THỨ DÙNGỂ CHỐT 1 CHẶNG CÔNG VIỆC 
+
+I. ĐỊNH NGHĨA VỀ KIỂM THỬ PHẦN MỀM - KIỂM THỬ PHẦN MỀM LÀ GÌ ??? 
+CÓ 3 ĐỊNH NGHĨA VỀ KIỂM THỬ PHẦN MỀM 
+ 1.
+ 2.
+ 3.
+ 
+ 1. LÀ SO SÁNH GIỮA GIÁ TRỊ THỰC TẾ (ACTUAL VALUE) VÀ GIÁ TRỊ KÌ VỌNG (EXPECTED VALUE) 
+	NẾU ACTUAL == EXPECTED --> MLEM 
+	NẾU ACTUAL != EXPECTED --> BUG, CÓ GÌ ĐÓ SAI SAI, TÔI NGHĨ RẰNG NÓ PHẢI THẾ NÀY (EXPECTED)
+					SAO NÓ LẠI RA THẾ NÀY (ACTUAL)
+
+	- LÀ SO SÁNH GIÁ TRỊ THỰC TẾ MÀ APP TRẢ VỀ, APP XỬ LÝ XONG TRẢ VỀ KẾT QUẢ GÌ ĐÓ
+	  SO VỚI     GIÁ TRỊ MONG ĐỌI, KÌ VỌNG, MÀ TRƯỚC KHI CÓ APP, THÌ APP NẾU CÓ CX PHẢI
+		     TÍNH RA DC NHƯ VẬY 
+*VÍ DỤ:
+- CTY TA LÀM CÁI APP MÁY TÍNH CASIO, CÓ PHÉP + 2 CON SỐ 
+  - DÙ CÓ APP HAY KO CÓ APP, THÌ 5 + 5 PHẢI LÀ 10 -> CTED VALUE
+  - BÂY GIỜ APP ĐÃ VIẾT XONG, THÌ PHẢI KIỂM THỬ XXEM CHẠY NGON, ĐÚNG HAY KO, ĐÚNG MỚI ĐEM DÙNG DC 
+ 
+  ĐỂ BIẾT APP CHẠY ÚNG HAY KO, PHẢI DÙNG THỬ , TỨC LÀ PHẢI LÀM THỬ CÁC PHÉP CỘNG (TEST)
+  VẬY TA A DATA VÀO APP, NHỜ TÍNH TOÁN XEM DC MẤY (ACTUAL), MẤY NÀY == KÌ VỌNG...
+      			=> THỰC TẾ LÀ 5.5 (VÍ DỤ) => BUG
+			   THỰC TẾ LÀ 1O => MLEM 
+
+* ĐỂ KIỂM THỬ 1 APP, TA PHẢI SO SÁNH EXPECTED == ACTUAL
+- EXPECTED TA PHẢI TỰ TÍNH, VÌ CHƯA CÓ APP TA CX PHẢI LÀM VIỆC NÀY 
+- ACTUAL, CHỜ APP TRẢ RA KẾT QUẢ, NGHĨA LÀ TA CẦN CHẠY APP, CHẠY APP THÌ PHẢI ĐƯA THÊM DATA 
+
+* ĐỂ KIỂM THỬ APP, TA - DÂN TESTER, QC, PHẢI CHUẨN BỊ BỘ DATA,  ĐƯA NÓ NÀO APP THEO CÁCH DÙNG MỖI MÀN HÌNH, MỖI TÍNH NĂNG, VÀ CHỜ XEM KẾT QUẢ XỬ LÍ THỰC TẾ, SAU ĐÓ TA KẾT LUẬN ĐÚNG SAI TRONG TÌNH HUỐNG XỬ LÝ ĐÂT (VÍ DỤ 5+5 LÀ 1 TÌNH HUỐNG) => CÁI NÀY DC GỌI LÀ 1 TESTCASE 
+1 TÌNH HUỐNG THỬ NGHIỆM / KIỂM THỬ APP
+
+>>>>> TEST CASE LÀ GÌ NÓ XUẤT HIỆN NHƯ THẾ NÀO? 
+
+>>>>> CÁC CÔNG OẠN, CÔNG VIỆC CỦA DÂN KIỂM THỬ PHẦN MỀM (QA - QUALITYASURANCE
+							 QC - QUALITY CONTROL TESTER)
+
+*1. ĐỌC CÁC TÀI LIỆU VỀ YÊU CẦU PHẦN MỀM (SRS, FRS, AC, DOD) ĐỂ HIỂU APP SẼ CÓ CHỨC NĂNG GÌ, TÍNH NĂNG GÌ, XỬ LÝ DC CÁI GÌ, CÓ MÀN HÌNH ... (BASE LINE) 
+
+*2. THIẾT KẾ CÁC TEST CASE 
+ĐƯA RA CÁC BỘ DATA ĐỂ TEST XEM CÁC MÀN HÌNH XỬ LÝ ĐÚNG HAY SAI 
+
+*3. TEST RUN - CHẠY THỬ CÁC TEST CASE VỚI APP ĐỂ XEM APP ĐÚNG HAY SAI - CHỜ APP XONG MỚI LÀM DC 
+- 
